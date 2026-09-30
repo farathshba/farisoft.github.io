@@ -5,264 +5,450 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Farath Shba" />
+    <title>Farath Shba — Not a tool. An actual human.</title>
     <meta
-      name="keywords"
-      content="sites, web, bio, links, devops, cicd, codacy, sonarqube, staticcodeanalysis, static-code, website"
+      name="description"
+      content="Farath Shba — the human DevOps platform. Ten years in production across Cloud, SRE, static code analysis. Self-hosted in Singapore. Currently accepting coffee chats."
     />
-    <meta name="theme-color" content="#ff3a5e" />
-    <meta name="copyright" content="farath 2024" />
-    <meta http-equiv="content-language" content="en-GB" />
-    <meta property="og:title" content="Bio // farath" />
-    <meta property="og:description" content="Bio // farath" />
+    <meta name="author" content="Farath Shba" />
+    <meta name="theme-color" content="#040405" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Farath Shba — Not a tool. An actual human." />
+    <meta
+      property="og:description"
+      content="The human DevOps platform. Ten years in production. Self-hosted in Singapore."
+    />
+    <meta property="og:image" content="assets/image/preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link
-      rel="shortcut icon"
-      href="assets/image/download.svg"
-      type="image/x-icon"
+      rel="icon"
+      href="assets/image/logo-page.svg"
+      type="image/svg+xml"
     />
-    <link rel="apple-touch-icon" href="assets/image/icon-browser.svg" />
+    <link rel="apple-touch-icon" href="assets/image/dp.jpg" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Who is Farath Shba</title>
   </head>
 
   <body>
-    <header>
-      <img
-        src="assets/image/1711184213644.jpeg"
-        alt="Pic Farath"
-        width="125px"
-        height="125px"
-      />
-      <h1>Farath Shba</h1>
-      <center><p>Your Partner for Static Code Analysis, SRE, and DevOps</p></center>
+    <!-- ========================= 00 / system status ========================= -->
+    <header class="hero">
+      <div class="wrap">
+        <div class="hero__grid">
+          <div>
+            <img
+              class="hero__photo"
+              src="assets/image/1711184213644.jpeg"
+              alt="Farath Shba"
+              width="64"
+              height="64"
+            />
+            <div class="badge-row">
+              <span class="badge live">self-hosted · singapore</span>
+              <span class="badge">v2025.9</span>
+              <span class="badge">uptime: 10 yrs</span>
+              <span class="badge plain">last coffee: 6h ago</span>
+            </div>
+            <h1>Not a tool.<br />An <em>actual human.</em></h1>
+            <p class="hero__sub">
+              You were probably looking for an AI that promises 10x DevOps.
+              This one is <strong>on-prem in Singapore</strong>, has been in
+              production for a decade, and does not hallucinate — he
+              documents. Static code analysis, SRE, DevOps. Ships real
+              pipelines, not vibes.
+            </p>
+            <div class="btn-row">
+              <a class="btn primary" href="#contact">Get in touch →</a>
+              <a class="btn" href="#history">Read the deployment log ↓</a>
+            </div>
+          </div>
+
+          <aside class="syscard" aria-label="System information">
+            <div class="syscard__title">
+              <span>runtime</span>
+              <span>farath@farath.com</span>
+            </div>
+            <dl>
+              <dt>substrate</dt>
+              <dd>coffee ☕</dd>
+              <dt>region</dt>
+              <dd>ap-southeast-1 · SG</dd>
+              <dt>status</dt>
+              <dd><span class="hl">available</span> · chats &amp; consulting</dd>
+              <dt>languages</dt>
+              <dd>EN · ta · ms · yaml</dd>
+              <dt>context window</dt>
+              <dd>10 yrs, retained</dd>
+              <dt>price</dt>
+              <dd>kopi C <span class="hl">S$1.40</span> / session</dd>
+            </dl>
+          </aside>
+        </div>
+      </div>
     </header>
 
-    <main>
-      <section>
-        <div>
-          <a
-            href="about.html"
-            rel="noopener"
-            target="_blank"
-          >
-            <article
-              style="
-                background: linear-gradient(90deg, #02d0ff 0%, #582bf3 100%);
-              "
-            >
-              <img
-                src="assets/icons/question-circle-svgrepo-com.svg"
-                alt="ícone livros"
-                width="28px"
-                height="28px"
-              />
-              <h2>Who am I?</h2>
-            </article>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>10+ yrs cloud &amp; devops</span>
+        <span>static code analysis: codacy · sonarqube</span>
+        <span>k8s clusters debugged: many</span>
+        <span>100% of emails read</span>
+        <span>~30% replied (sla)</span>
+        <span>hawker centres mapped: all</span>
+        <span>devops events co-organised: yes</span>
+        <span>10+ yrs cloud &amp; devops</span>
+        <span>static code analysis: codacy · sonarqube</span>
+        <span>k8s clusters debugged: many</span>
+        <span>100% of emails read</span>
+        <span>~30% replied (sla)</span>
+        <span>hawker centres mapped: all</span>
+        <span>devops events co-organized: yes</span>
+      </div>
+    </div>
+
+    <main class="wrap">
+      <!-- ========================= 01 / capabilities ========================= -->
+      <section id="capabilities">
+        <span class="eyebrow"><span class="num">01</span> / capabilities</span>
+        <h2 class="section-title">One human, <em>six tool-calls</em> deep.</h2>
+        <p class="lede" style="margin-bottom: 32px">
+          Stable API surface across the verticals you actually need. No
+          fine-tuning required — pre-trained by ten years of production.
+        </p>
+
+        <div class="tiles">
+          <a class="tile" href="https://www.linkedin.com/in/farathshba/" rel="noopener" target="_blank">
+            <img src="assets/icons/codacy-svgrepo-com.svg" alt="Codacy" width="28" height="28" />
+            <h3>Static code analysis</h3>
+            <p>Codacy, SonarQube, SAST pipelines that catch it before prod does.</p>
+            <span class="tag">api: lint.everything</span>
           </a>
 
-          <a href="https://farath.substack.com/" rel="noopener" target="_blank">
-            <article
-              style="
-                background: linear-gradient(70deg, #12c20c 13%, #26dd72 95%);
-              "
-            >
-              <img
-                src="assets/icons/arbetsfor-svgrepo-com.svg"
-                alt="ícone feliz"
-                width="28px"
-                height="28px"
-              />
-              <h2>Latest Tech Roles</h2>
-            </article>
+          <a class="tile" href="https://www.linkedin.com/in/farathshba/" rel="noopener" target="_blank">
+            <img src="assets/icons/docker-16-svgrepo-com.svg" alt="Docker" width="28" height="28" />
+            <h3>Docker &amp; Kubernetes</h3>
+            <p>Containerised workloads that stay containerised. Multi-cloud, awake on-call.</p>
+            <span class="tag">api: infra.k8s.notdown</span>
           </a>
 
-          <a href="https://www.linkedin.com/in/farathshba/" rel="noopener" target="_blank">
-            <article
-              style="
-                background: linear-gradient(70deg, #923dff 13%, #ac76ff 95%);
-              "
-            >
-              <img
-                src="assets/icons/linkedin.svg"
-                alt="ícone feliz"
-                width="28px"
-                height="28px"
-              />
-              <h2>Portfolio</h2>
-            </article>
-          </a>
-        </div>
-
-        <h2>Let's talk DevOps!</h2>
-
-        <div>
-          <a
-            href=""
-            rel="noopener"
-            target="_blank"
-          >
-            <article
-              style="
-                background: linear-gradient(
-                  45deg,
-                  #f09433 0%,
-                  #e6683c 25%,
-                  #dc2743 50%,
-                  #cc2366 75%,
-                  #bc1888 100%
-                );
-              "
-            >
-              <img
-                src="assets/icons/codacy-svgrepo-com.svg"
-                alt="ícone instagram"
-                width="28px"
-                height="28px"
-              />
-              <h2>Codacy</h2>
-            </article>
+          <a class="tile" href="https://github.com/farisoft" rel="noopener" target="_blank">
+            <img src="assets/icons/github.svg" alt="GitHub" width="28" height="28" />
+            <h3>CI/CD &amp; Git</h3>
+            <p>Pipelines your team can grep through. No 40-minute builds on my watch.</p>
+            <span class="tag">api: pipelines.ship</span>
           </a>
 
-          <a href="" rel="noopener" target="_blank">
-            <article style="background: #0060c0">
-              <img
-                src="assets/icons/telegram.svg"
-                alt="ícone telegram"
-                width="28px"
-                height="28px"
-              />
-              <h2>SonarQube</h2>
-            </article>
+          <a class="tile" href="https://farath.substack.com/" rel="noopener" target="_blank">
+            <img src="assets/icons/book.svg" alt="Newsletter" width="28" height="28" />
+            <h3>Latest Tech Roles</h3>
+            <p>A weekly email of the newest tech roles. Shipped every Saturday or Sunday.</p>
+            <span class="tag">api: newsletter.weekly</span>
           </a>
 
           <a
-            href="https://www.linkedin.com/in/farathshba/"
-            rel="noopener"
-            target="_blank"
-          >
-            <article
-              style="
-                background: linear-gradient(
-                  90deg,
-                  rgb(86, 123, 246) 0%,
-                  rgba(47, 41, 157, 1) 100%
-                );
-              "
-            >
-              <img
-                src="assets/icons/docker-16-svgrepo-com.svg"
-                alt="ícone linkedin"
-                width="28px"
-                height="28px"
-              />
-              <h2>Docker</h2>
-            </article>
-          </a>
-
-          <a href="https://github.com/farisoft" rel="noopener" target="_blank">
-            <article
-              style="
-                background: linear-gradient(58deg, #1f9b95 8%, #3983b4 98%);
-              "
-            >
-              <img
-                src="assets/icons/github.svg"
-                alt="ícone github"
-                width="28px"
-                height="28px"
-              />
-              <h2>Git</h2>
-            </article>
-          </a>
-
-          <a
-          href="https://www.linkedin.com/in/farathshba/"
-          rel="noopener"
-          target="_blank"
-        >
-          <article
-            style="
-              background: linear-gradient(
-                90deg,
-                rgb(235, 246, 86) 0%,
-                rgb(41, 157, 70) 100%
-              );
-            "
-          >
-            <img
-              src="assets/icons/kubernetes-svgrepo-com.svg"
-              alt="ícone linkedin"
-              width="28px"
-              height="28px"
-            />
-            <h2>K8S</h2>
-          </article>
-        </a>
-
-        <a href="https://github.com/farisoft" rel="noopener" target="_blank">
-          <article
-            style="
-              background: linear-gradient(58deg, #1f9b95 8%, #3983b4 98%);
-            "
-          >
-            <img
-              src="assets/icons/logo_300 (1) (1).png"
-              alt="ícone github"
-              width="28px"
-              height="28px"
-            />
-            <h2>CTO2B</h2>
-          </article>
-        </a>
-         
-        </div>
-        <h2>Other Exciting Stuffs!</h2>
-
-        <div>
-          <a
+            class="tile"
             href="https://calendar.google.com/calendar/u/0?cid=MDZjMjAxY2ExNzNiZGM2ZGRhYmI0NzI0NTU1MWU4NmVjOWYwNTljNjg4YTAxNTA3ZDk1N2U0ZmE3MTQ2MzNhY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
             rel="noopener"
             target="_blank"
           >
-            <article
-              style="
-                background: linear-gradient(
-                  45deg,
-                  #f09433 0%,
-                  #e6683c 25%,
-                  #dc2743 50%,
-                  #cc2366 75%,
-                  #bc1888 100%
-                );
-              "
-            >
-              <img
-                src="assets/icons/codacy-svgrepo-com.svg"
-                alt="ícone instagram"
-                width="28px"
-                height="28px"
-              />
-              <h2>Networking Events!</h2>
-            </article>
+            <img src="assets/icons/coffee.svg" alt="Events" width="28" height="28" />
+            <h3>DevOps events · SG</h3>
+            <p>Co-organising a DevOps-focused event for Singapore. Networking calendar is public.</p>
+            <span class="tag">api: events.singapore</span>
           </a>
 
-          <a href="" rel="noopener" target="_blank">
-            <article style="background: #0060c0">
-              <img
-                src="assets/icons/telegram.svg"
-                alt="ícone telegram"
-                width="28px"
-                height="28px"
-              />
-              <h2>OSS Projects</h2>
-            </article>
+          <a class="tile" href="https://github.com/farisoft" rel="noopener" target="_blank">
+            <img src="assets/icons/setup.svg" alt="CTO2B" width="28" height="28" />
+            <h3>CTO2B</h3>
+            <p>Building tooling for the CTO journey — fractional, practical, shipped.</p>
+            <span class="tag">api: cto2b.ship</span>
           </a>
         </div>
       </section>
+
+      <!-- ========================= 02 / stats ========================= -->
+      <section id="benchmarks">
+        <span class="eyebrow"><span class="num">02</span> / benchmarks</span>
+        <h2 class="section-title">Measured on tasks that <em>actually exist.</em></h2>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>10+</strong>
+            <span>years in cloud &amp; devops</span>
+          </div>
+          <div class="stat">
+            <strong>100%</strong>
+            <span>of emails read, guaranteed</span>
+          </div>
+          <div class="stat">
+            <strong>~30%</strong>
+            <span>reply rate (self-reported sla)</span>
+          </div>
+          <div class="stat">
+            <strong>0</strong>
+            <span>involuntary reboots, career to date</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================= 03 / history ========================= -->
+      <section id="history">
+        <span class="eyebrow"><span class="num">03</span> / deployment history</span>
+        <h2 class="section-title">Production environments, <em>previously hosted.</em></h2>
+        <p class="lede" style="margin-bottom: 32px">
+          env: realworld · region: ap-southeast · no rollbacks recorded
+        </p>
+
+        <div class="history">
+          <div class="history__row">
+            <div class="history__when">
+              2014 <span class="now">→ now</span> · 10 yrs
+            </div>
+            <div class="history__what">
+              <h3>Cloud &amp; DevOps Engineer</h3>
+              <p>
+                Ten years helping teams adopt DevOps best practices for their
+                clouds — CI/CD, containers, observability, and the cultural
+                parts that actually make it stick.
+              </p>
+              <div class="badge-row">
+                <span class="badge">docker</span>
+                <span class="badge">kubernetes</span>
+                <span class="badge">terraform</span>
+                <span class="badge">sonarqube</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="history__row">
+            <div class="history__when">ongoing · weekly</div>
+            <div class="history__what">
+              <h3>Newsletter author — Latest Tech Roles</h3>
+              <p>
+                Every Saturday or Sunday: the week's newest tech roles,
+                curated and shipped to inboxes.
+              </p>
+              <div class="badge-row">
+                <span class="badge">substack</span>
+                <span class="badge">curation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="history__row">
+            <div class="history__when">ongoing · SG</div>
+            <div class="history__what">
+              <h3>DevOps event co-organiser</h3>
+              <p>
+                Co-organising a DevOps-focused event for Singapore. Community
+                first, slide decks optional.
+              </p>
+              <div class="badge-row">
+                <span class="badge">community</span>
+                <span class="badge">events</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================= 04 / pricing ========================= -->
+      <section id="pricing">
+        <span class="eyebrow"><span class="num">04</span> / pricing</span>
+        <h2 class="section-title">Three tiers. <em>One</em> is free.</h2>
+        <p class="lede" style="margin-bottom: 32px">
+          No tokens, no rate limits, no per-seat surprises. One Farath per
+          conversation — singleton by design.
+        </p>
+
+        <div class="tiers">
+          <div class="tier">
+            <div class="tier__status"><span class="ok">— free</span></div>
+            <h3>Coffee tier</h3>
+            <div class="tier__price">S$0 <small>per encounter, in SG</small></div>
+            <ul>
+              <li>One (1) kopi chat, 30 min</li>
+              <li>Casual technical opinions</li>
+              <li>Best hawker recommendations</li>
+              <li class="strike">Anything in writing</li>
+              <li class="strike">SLA</li>
+            </ul>
+            <a class="btn" href="mailto:farisoft@gmail.com">Schedule →</a>
+          </div>
+
+          <div class="tier active">
+            <div class="tier__status"><span class="warn">— consulting</span></div>
+            <h3>DevOps tier</h3>
+            <div class="tier__price">Let's talk <small>per engagement</small></div>
+            <ul>
+              <li>Static code analysis setup (Codacy, SonarQube)</li>
+              <li>CI/CD pipeline design &amp; review</li>
+              <li>K8s / Docker architecture guidance</li>
+              <li>Best-practices workshops for your team</li>
+              <li>Written deliverables included</li>
+            </ul>
+            <a class="btn primary" href="mailto:farisoft@gmail.com">Provision →</a>
+          </div>
+
+          <div class="tier">
+            <div class="tier__status"><span class="off">— full-time</span></div>
+            <h3>Full-time tier</h3>
+            <div class="tier__price">n=1 <small>availability varies</small></div>
+            <ul>
+              <li>Exceptional teams only</li>
+              <li>Region: ap-southeast-1 preferred</li>
+              <li>On-call: shared, fairly</li>
+              <li class="strike">Recruiter spam</li>
+              <li class="strike">Unlimited PTO slides</li>
+            </ul>
+            <a class="btn" href="mailto:farisoft@gmail.com">Enquire →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================= 05 / contact ========================= -->
+      <section id="contact">
+        <span class="eyebrow"><span class="num">05</span> / integrations</span>
+        <h2 class="section-title">Plug into <em>any</em> messaging surface.</h2>
+        <p class="lede" style="margin-bottom: 32px">
+          Stable API across the channels you already use. Webhooks not
+          required.
+        </p>
+
+        <div class="integrations">
+          <a class="chan" href="https://www.linkedin.com/in/farathshba/" rel="noopener" target="_blank">
+            <span class="chan__glyph">in</span>
+            <span class="chan__meta">
+              <strong>LinkedIn</strong>
+              <span>/in/farathshba</span>
+            </span>
+            <span class="badge live">live</span>
+          </a>
+
+          <a class="chan" href="https://t.me/farathsg" rel="noopener" target="_blank">
+            <span class="chan__glyph">✈</span>
+            <span class="chan__meta">
+              <strong>Telegram</strong>
+              <span>@farathsg</span>
+            </span>
+            <span class="badge live">live</span>
+          </a>
+
+          <a class="chan" href="https://github.com/farisoft" rel="noopener" target="_blank">
+            <span class="chan__glyph">⌂</span>
+            <span class="chan__meta">
+              <strong>GitHub</strong>
+              <span>/farisoft</span>
+            </span>
+            <span class="badge live">live</span>
+          </a>
+
+          <a class="chan" href="https://farath.substack.com/" rel="noopener" target="_blank">
+            <span class="chan__glyph">✉</span>
+            <span class="chan__meta">
+              <strong>Newsletter</strong>
+              <span>farath.substack.com</span>
+            </span>
+            <span class="badge live">weekly</span>
+          </a>
+
+          <a class="chan" href="mailto:farisoft@gmail.com">
+            <span class="chan__glyph">@</span>
+            <span class="chan__meta">
+              <strong>Email</strong>
+              <span>farisoft@gmail.com</span>
+            </span>
+            <span class="badge async">~30% sla</span>
+          </a>
+
+          <a
+            class="chan"
+            href="https://calendar.google.com/calendar/u/0?cid=MDZjMjAxY2ExNzNiZGM2ZGRhYmI0NzI0NTU1MWU4NmVjOWYwNTljNjg4YTAxNTA3ZDk1N2U0ZmE3MTQ2MzNhY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+            rel="noopener"
+            target="_blank"
+          >
+            <span class="chan__glyph">▦</span>
+            <span class="chan__meta">
+              <strong>Networking calendar</strong>
+              <span>events · SG</span>
+            </span>
+            <span class="badge live">live</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ========================= 06 / faq ========================= -->
+      <section id="faq">
+        <span class="eyebrow"><span class="num">06</span> / faq</span>
+        <h2 class="section-title">Frequently asked, <em>occasionally</em> answered.</h2>
+
+        <div class="faq">
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false" aria-controls="faq-a1">
+              Do you hallucinate?
+            </button>
+            <p class="faq__a" id="faq-a1" hidden>
+              Only about meetings that never made it to my calendar. Everything
+              else comes with a citation or a postmortem.
+            </p>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false" aria-controls="faq-a2">
+              What's your context window?
+            </button>
+            <p class="faq__a" id="faq-a2" hidden>
+              Roughly ten years of production cloud and DevOps, plus however
+              much kopi I had this morning. State persists across sessions —
+              no re-prompting required.
+            </p>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false" aria-controls="faq-a3">
+              Can I self-host you?
+            </button>
+            <p class="faq__a" id="faq-a3" hidden>
+              Already self-hosted in Singapore. Read-only access via email
+              and Telegram; coffee chats available on request.
+            </p>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false" aria-controls="faq-a4">
+              How is this different from an LLM?
+            </button>
+            <p class="faq__a" id="faq-a4" hidden>
+              I write the pipelines the LLMs get deployed into. I push back on
+              bad specs, remember which dashboard lied last quarter, and bring
+              kopi instead of tokens.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer>
+      <div class="wrap">
+        <p>
+          © farath · v2025.9 · deployed via github pages · region:
+          ap-southeast-1 · <a href="https://github.com/farisoft">source ↗</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelectorAll(".faq__q").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var answer = document.getElementById(btn.getAttribute("aria-controls"));
+          var open = btn.getAttribute("aria-expanded") === "true";
+          btn.setAttribute("aria-expanded", String(!open));
+          answer.hidden = open;
+        });
+      });
+    </script>
   </body>
 </html>
