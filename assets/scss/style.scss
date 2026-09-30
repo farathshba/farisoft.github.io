@@ -1,1 +1,5 @@
-@import "./variables", "./reset", "./profile", "./card";
+@use "variables" as *;
+@use "reset" as *;
+@use "base" as *;
+@use "hero" as *;
+@use "cards" as *;

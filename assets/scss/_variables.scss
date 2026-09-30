@@ -1,10 +1,19 @@
-$font-main: "Archivo";
+// ---------------------------------------------------------------------------
+// farath.com — design tokens
+// dark, terminal-precise, one accent
+// ---------------------------------------------------------------------------
+$font-main: "Archivo", system-ui, sans-serif;
+$font-mono: ui-monospace, "JetBrains Mono", "SFMono-Regular", Menlo, Consolas,
+  monospace;
 
-$color-main: #ff3a5e;
-
-$color-white: #fff;
-
+$color-main: #ff3a5e; // single accent — links, badges, key words
+$color-white: #f5f5f7;
+$color-dim: rgba(245, 245, 247, 0.62);
+$color-faint: rgba(245, 245, 247, 0.38);
 $bg-color: #040405;
+$bg-raised: #0c0c0f;
+$border-color: rgba(245, 245, 247, 0.12);
+$border-strong: rgba(245, 245, 247, 0.22);
 
 $gap-0: 0px;
 $gap-1: 8px;

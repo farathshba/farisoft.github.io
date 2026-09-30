@@ -1,0 +1,205 @@
+@use "variables" as *;
+// ---------------------------------------------------------------------------
+// shared primitives — layout, section headers, badges, buttons, marquee
+// ---------------------------------------------------------------------------
+.wrap {
+  @include grid-layout();
+  padding: 0 $gap-3;
+}
+
+main {
+  display: block;
+}
+
+section {
+  padding: $gap-7 0;
+
+  @include responsive-mobile {
+    padding: $gap-5 0;
+  }
+
+  + section {
+    border-top: 1px solid $border-color;
+  }
+}
+
+// --- eyebrow: the small mono kicker above section titles --------------------
+.eyebrow {
+  display: block;
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $color-faint;
+  margin-bottom: $gap-2;
+
+  .num {
+    color: $color-main;
+  }
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-bottom: $gap-4;
+
+  em {
+    font-style: italic;
+    color: $color-main;
+  }
+}
+
+.lede {
+  max-width: 640px;
+  color: $color-dim;
+  font-size: 1.05rem;
+}
+
+// --- status badges -----------------------------------------------------------
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: $gap-1;
+  font-family: $font-mono;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: $color-dim;
+  border: 1px solid $border-color;
+  border-radius: 999px;
+  padding: 4px 12px;
+  white-space: nowrap;
+
+  &::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $color-faint;
+  }
+
+  &.live::before {
+    background: #35d07f;
+  }
+
+  &.async::before {
+    background: #f5c518;
+  }
+
+  &.deprecated::before {
+    background: $color-main;
+  }
+
+  &.plain {
+    border: none;
+    padding: 0;
+    color: $color-faint;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap-1;
+}
+
+// --- buttons -----------------------------------------------------------------
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: $gap-1;
+  font-family: $font-mono;
+  font-size: 0.85rem;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: 1px solid $border-strong;
+  color: $color-white;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+
+  &:hover {
+    opacity: 1;
+    background: rgba(255, 58, 94, 0.08);
+    border-color: $color-main;
+    transform: translateY(-1px);
+  }
+
+  &.primary {
+    background: $color-main;
+    border-color: $color-main;
+    color: #fff;
+    font-weight: 500;
+
+    &:hover {
+      background: #ff5573;
+    }
+  }
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap-2;
+}
+
+// --- mono tag (api-style labels) ----------------------------------------------
+.tag {
+  font-family: $font-mono;
+  font-size: 0.72rem;
+  color: $color-main;
+  opacity: 0.9;
+}
+
+// --- ticker / marquee ---------------------------------------------------------
+.ticker {
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  overflow: hidden;
+  padding: $gap-2 0;
+  margin: $gap-5 0;
+
+  &__track {
+    display: flex;
+    gap: $gap-4;
+    width: max-content;
+    animation: ticker-scroll 30s linear infinite;
+
+    span {
+      font-family: $font-mono;
+      font-size: 0.8rem;
+      color: $color-dim;
+      white-space: nowrap;
+
+      &::after {
+        content: "●";
+        color: $color-main;
+        margin-left: $gap-4;
+        font-size: 0.5rem;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker__track {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
